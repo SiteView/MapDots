@@ -48,6 +48,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 #else
     MKMapView *mapView_;
 #endif
+    
+    PlaceAnnotation *eventAnnotation_;
 #endif
     CLLocationManager *locationManager;
     CLLocationCoordinate2D position_;
@@ -461,6 +463,28 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 - (void)mapView:(BMKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
     mapView_.showsUserLocation = NO;
+}
+
+- (void)mapview:(BMKMapView *)mapView onLongClick:(CLLocationCoordinate2D)coordinate
+{
+    // 长按地图，发起事件
+    if (eventAnnotation_ == nil) {
+        eventAnnotation_ = [[PlaceAnnotation alloc] init];
+    }
+    eventAnnotation_.coordinate = coordinate;
+//    placeAnnotation.title = [NSString stringWithFormat:@"%@", room.roomName];
+    
+    [mapView_ addAnnotation:eventAnnotation_];
+
+    if (createRoomViewController == nil) {
+        createRoomViewController = [[CreateEventViewController alloc] init];
+    }
+    createRoomViewController.coordinate = coordinate;
+    createRoomViewController.isPoint = YES;
+    
+    [createRoomViewController setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:createRoomViewController animated:YES];
+
 }
 #else
 

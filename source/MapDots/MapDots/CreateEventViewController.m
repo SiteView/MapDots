@@ -34,6 +34,9 @@
     UIActionSheet *actionSheet_;
 }
 
+@synthesize coordinate;
+@synthesize isPoint;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -247,6 +250,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (isPoint) {
+        [motionPositionBtn setTitle:@"The point of map" forState:UIControlStateNormal];
+        motionPositionBtn.enabled = NO;
+    } else {
+        motionPositionBtn.enabled = YES;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated

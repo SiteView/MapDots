@@ -11,4 +11,7 @@
 
 @interface CreateEventViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, XMPPCreateRoomDelegate>
 
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic) BOOL isPoint;
+
 @end
