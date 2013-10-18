@@ -13,7 +13,6 @@
 #import "EditSexViewController.h"
 #import "AppDelegate.h"
 #import "AboutViewController.h"
-#import "GuideViewController.h"
 #import "EditStatusViewController.h"
 
 #define VERSION_INFO    @"0.8.6"
@@ -37,6 +36,7 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController setNavigationBarHidden:NO];
     
     editButton =
     [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit", @"Edit")
@@ -297,16 +297,16 @@
     
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
-
+/*
 -(XMPPStream *)xmppStream{
     
     return [[self appDelegate] xmppStream];
 }
-
+*/
 - (void)saveEdit
 {
     UserProperty *userProperty = [UserProperty sharedInstance];
-    if (![userProperty.nickName isEqualToString:userProperty.originalNickName]) {
+/*    if (![userProperty.nickName isEqualToString:userProperty.originalNickName]) {
         // 修改NickName
         [[self appDelegate] changeNickName:userProperty.nickName];
     }
@@ -319,7 +319,7 @@
     if (![userProperty.status isEqualToString:userProperty.originalStatus]) {
         [[self appDelegate] changeUserStatus:userProperty.status];
     }
-    
+*/    
     isEditMode = NO;
     [table_ reloadData];
     [self.navigationItem setLeftBarButtonItem:nil];

@@ -1,5 +1,7 @@
 //
-// Prefix header for all source files of the 'MapDots' target in the 'MapDots' project
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
 //
 
 #import <Availability.h>
@@ -12,16 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreLocation/CoreLocation.h>
-    #import <AddressBook/AddressBook.h>
-    #import <AddressBookUI/AddressBookUI.h>
-    #import <MessageUI/MessageUI.h>
-//    #import <GoogleMaps/GoogleMaps.h>
-//    #import <GoogleMapsM4B/GoogleMaps.h>
     #import <CoreData/CoreData.h>
     #import <MapKit/MapKit.h>
     #import "BMapKit.h"
-    #import "EGORefreshTableHeaderView.h"
 #endif
-
-//#define GOOGLE_MAPS
 #define BAIDU_MAPS

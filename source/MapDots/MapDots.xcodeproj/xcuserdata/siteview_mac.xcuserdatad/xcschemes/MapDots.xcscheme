@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F0671EA17CCD14200BB47CB"
+               BlueprintIdentifier = "32DEF1021808DDB1005A9D83"
                BuildableName = "MapDots.app"
                BlueprintName = "MapDots"
                ReferencedContainer = "container:MapDots.xcodeproj">
@@ -28,11 +28,21 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "32DEF1291808DDB1005A9D83"
+               BuildableName = "MapDotsTests.xctest"
+               BlueprintName = "MapDotsTests"
+               ReferencedContainer = "container:MapDots.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F0671EA17CCD14200BB47CB"
+            BlueprintIdentifier = "32DEF1021808DDB1005A9D83"
             BuildableName = "MapDots.app"
             BlueprintName = "MapDots"
             ReferencedContainer = "container:MapDots.xcodeproj">
@@ -51,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F0671EA17CCD14200BB47CB"
+            BlueprintIdentifier = "32DEF1021808DDB1005A9D83"
             BuildableName = "MapDots.app"
             BlueprintName = "MapDots"
             ReferencedContainer = "container:MapDots.xcodeproj">
@@ -69,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F0671EA17CCD14200BB47CB"
+            BlueprintIdentifier = "32DEF1021808DDB1005A9D83"
             BuildableName = "MapDots.app"
             BlueprintName = "MapDots"
             ReferencedContainer = "container:MapDots.xcodeproj">
